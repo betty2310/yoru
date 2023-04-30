@@ -1,8 +1,9 @@
 # 夜
 
 ```
-DE:   hyprland
-Term: kitty
+OS:   Arch
+DE:   Hyprland
+Term: Kitty
 ```
 
 ![](./showcase.png)
