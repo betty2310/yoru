@@ -3,7 +3,7 @@
     border-radius: 0px;
     font-family: "JetBrains Mono, Font Awesome 6 Pro, JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 11px;
+    font-size: 10px;
     min-height: 0px;
 }
 
@@ -143,5 +143,7 @@ tooltip label {
 
 
 #custom-power {
-    background-color:#cba6f7;
+    background-color:#1e1e2e;
+    color: #f38ba8;
+    margin-right: 10px;
 }

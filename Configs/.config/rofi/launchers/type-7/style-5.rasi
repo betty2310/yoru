@@ -21,13 +21,13 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 9";
-    background:                  #080717;
-    background-alt:              #151924;
-    foreground:                  #FFFFFF;
-    selected:                    #C88E34;
-    active:                      #2E3F34;
-    urgent:                      #D08261;
+    font:                        "JetBrainsMono Nerd Font SemiBold 9";
+    background:     #181825;
+    background-alt: #282839FF;
+    foreground:     #D9E0EEFF;
+    selected:       #7AA2F7FF;
+    active:         #ABE9B3FF;
+    urgent:         #F28FADFF;
 }
     
 /*****----- Main Window -----*****/
@@ -38,6 +38,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       800px;
+    height:                      400px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -69,7 +70,7 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     8px;
-    padding:                     80px 60px;
+    padding:                     60px 40px;
     background-color:            transparent;
     background-image:            url("~/.config/rofi/rain_world1.png", width);
     text-color:                  @foreground;
@@ -146,7 +147,7 @@ element {
     enabled:                     true;
     spacing:                     8px;
     padding:                     4px;
-    border-radius:               100%;
+    border-radius:               6px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -165,15 +166,15 @@ element normal.active {
 }
 element selected.normal {
     background-color:            @selected;
-    text-color:                  @foreground;
+    text-color:                  @background;
 }
 element selected.urgent {
     background-color:            @urgent;
-    text-color:                  @foreground;
+    text-color:                  @background;
 }
 element selected.active {
     background-color:            @urgent;
-    text-color:                  @foreground;
+    text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;

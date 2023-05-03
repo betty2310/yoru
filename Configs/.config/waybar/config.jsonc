@@ -7,7 +7,6 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "modules-right": [
-        "tray",
         "cpu",
         "memory",
         "backlight",
@@ -16,6 +15,7 @@
         "bluetooth",
         "network",
         "clock",
+        "tray",
         "custom/power"
     ],
     "modules-left": [
