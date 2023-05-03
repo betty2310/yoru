@@ -5,6 +5,7 @@ export BROWSER="google-chrome"
 
 # Path 
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/share/bin/:$PATH
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -20,12 +21,17 @@ export PATH=/usr/local/texlive/2022/bin/universal-darwin:$PATH
 # Neovim
 export EDITOR="nvim"
 
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 plugins=(
         fast-syntax-highlighting 
         zsh-autosuggestions
-        )
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+        zsh-completions
+        z
+        docker-compose
+        docker
+      )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,9 +55,20 @@ alias :q='exit'
 alias cl="clear"
 alias celar="clear"
 alias dc="docker-compose"
+alias d="docker"
 
 eval "$(starship init zsh)"
 
 # fnm
 export PATH="/home/betty/.local/share/fnm:$PATH"
 eval "`fnm env`"
+
+export FZF_DEFAULT_OPTS=" \
+--height=40% --layout=reverse --info=inline --margin=1 \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+shuf -n 1 ~/.local/share/dataset.csv | awk -F ',' '{printf "\033[31m%s: \033[0m%s - \033[33m%s\033[0m", $1, $2, $3}' | cowthink -w
+
+eval $(thefuck --alias)
