@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+fd | fzf --print0 --preview 'bat --color=always {}' --preview-window '~3' --height=90% | xargs -0 -o nvim
