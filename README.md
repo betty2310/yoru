@@ -1,9 +1,10 @@
 # 夜
 
 ```
-OS:   Arch
-DE:   Hyprland
-Term: Kitty
+OS:     Arch
+DE:     Hyprland
+Term:   Wezterm
+Editor: Neovim
 ```
 
-![](./showcase.png)
+![](./yoru.png)
